@@ -7,7 +7,7 @@ from django.http import HttpResponse
 
 def hello_world(request):
     return HttpResponse('''
-        <h1>Hello World!</h1>
+        <h1>Hola Mundo!</h1>
         <h3>Hola desde django</h3>
         ''')
 
