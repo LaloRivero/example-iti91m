@@ -4,4 +4,3 @@ __pycache__/
 db.sqlite3
 posts/migrations/
 .env
-static/css/bootstrap.min.css
