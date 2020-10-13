@@ -52,6 +52,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Users middleware
+    'utgram.middleware.ProfileCompleteMiddleware',
 ]
 
 ROOT_URLCONF = 'utgram.urls'
