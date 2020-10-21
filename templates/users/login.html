@@ -4,6 +4,10 @@
     <title>Sign in</title>
 {% endblock head_content %}
 
+{% block title %}
+     <h3 class="ml-5">Login</h3>
+{% endblock title %}
+
 {% block container %}
 
     {% if error %}
@@ -14,11 +18,20 @@
         {% csrf_token %}
         <div class="form-group">
             <input class="form-control mb-2" type="text" placeholder="Username" name="username" />
-            <input class="form-control" type="password" placeholder="Password" name="password" />
+            <input class="form-control" type="text" placeholder="Password" name="password" />
         </div>
         <button class="btn btn-primary btn-block" type="submit">Sign in</button>
 
+        <div class= "d-flex flex-column mt-3">
+            <p class="m-auto">You don't have an account, <a href={% url 'signup' %}>Sign Up</a> now</p>
+        </div>
     </form>
+    {% if error %}
+        <div class="d-flex flex-column mt-3">
+            <p class="m-auto"> Forgot your password? Click
+            <a href="{% url 'password_reset'%}">here.</a> </p>
+        </div>
+    {% endif %}
 
 {% endblock container %}
 
